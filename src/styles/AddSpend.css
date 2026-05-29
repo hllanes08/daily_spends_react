@@ -1,0 +1,251 @@
+.add-spend-page {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.add-spend-card {
+  padding: 36px;
+}
+
+.add-spend-header {
+  margin-bottom: 28px;
+}
+
+.add-spend-title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.add-spend-subtitle {
+  font-size: 14px;
+  color: var(--text-secondary);
+  margin-top: 4px;
+}
+
+.form-error {
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  color: #dc2626;
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 13px;
+  margin-bottom: 20px;
+}
+
+.add-spend-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+/* Amount */
+.amount-input-wrapper {
+  display: flex;
+  align-items: baseline;
+  gap: 4px;
+}
+
+.amount-prefix {
+  font-size: 28px;
+  color: var(--text-secondary);
+  font-weight: 300;
+}
+
+.amount-input {
+  font-size: 36px;
+  font-weight: 300;
+  border: none;
+  outline: none;
+  color: var(--primary);
+  width: 100%;
+  font-family: inherit;
+  background: transparent;
+}
+
+.amount-input::placeholder {
+  color: #d0d0d8;
+}
+
+/* hide number spinners */
+.amount-input::-webkit-outer-spin-button,
+.amount-input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.amount-input[type=number] {
+  -moz-appearance: textfield;
+}
+
+/* Inputs */
+.form-select,
+.form-date,
+.form-text {
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 14px;
+  color: var(--text);
+  background: #fafafc;
+  outline: none;
+  font-family: inherit;
+  transition: border-color 0.15s ease;
+}
+
+.form-select:focus,
+.form-date:focus,
+.form-text:focus {
+  border-color: var(--primary);
+  background: #fff;
+}
+
+.field-error {
+  font-size: 12px;
+  color: #dc2626;
+}
+
+/* Rate Options */
+.rate-options {
+  display: flex;
+  gap: 10px;
+}
+
+.rate-option {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.rate-option input {
+  display: none;
+}
+
+.rate-dot-input {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  transition: all 0.15s ease;
+}
+
+.rate-option--selected {
+  border-color: var(--rate-color);
+  color: var(--text);
+  background: color-mix(in srgb, var(--rate-color) 6%, transparent);
+}
+
+.rate-option--selected .rate-dot-input {
+  background: var(--rate-color);
+  border-color: var(--rate-color);
+}
+
+/* Actions */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 12px;
+  padding-top: 8px;
+}
+
+.btn-cancel {
+  padding: 12px 28px;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  border-radius: 10px;
+  font-family: inherit;
+}
+
+.btn-cancel:hover {
+  background: var(--bg);
+}
+
+.btn-save {
+  padding: 12px 32px;
+  background: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: opacity 0.15s ease;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-save:hover:not(:disabled) {
+  opacity: 0.9;
+}
+
+.btn-save:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Success */
+.success-card {
+  text-align: center;
+  padding: 60px 40px;
+}
+
+.success-icon {
+  margin-bottom: 16px;
+}
+
+.success-card h3 {
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--primary);
+  margin-bottom: 8px;
+}
+
+.success-card p {
+  font-size: 14px;
+  color: var(--text-secondary);
+}
+
+@media (max-width: 640px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .rate-options {
+    flex-direction: column;
+  }
+
+  .form-actions {
+    flex-direction: column-reverse;
+  }
+
+  .btn-save, .btn-cancel {
+    width: 100%;
+    justify-content: center;
+  }
+}

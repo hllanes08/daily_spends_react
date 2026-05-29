@@ -1,0 +1,305 @@
+.insights-page {
+  max-width: 1200px;
+}
+
+.insights-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 280px;
+  gap: 20px;
+}
+
+/* Donut Breakdown */
+.breakdown-card {
+  text-align: center;
+}
+
+.donut-container {
+  width: 160px;
+  margin: 0 auto 16px;
+}
+
+.donut-chart {
+  width: 100%;
+  height: auto;
+}
+
+.donut-legend {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  text-align: left;
+}
+
+.legend-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 13px;
+}
+
+.legend-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legend-name {
+  flex: 1;
+  color: var(--text);
+}
+
+.legend-pct {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+/* Score Card */
+.score-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.score-display {
+  background: var(--primary);
+  border-radius: 12px;
+  padding: 28px 20px;
+  text-align: center;
+  color: #fff;
+  margin-bottom: 16px;
+}
+
+.score-number {
+  margin-bottom: 8px;
+}
+
+.score-value {
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.score-max {
+  font-size: 24px;
+  opacity: 0.6;
+}
+
+.score-text {
+  font-size: 13px;
+  opacity: 0.8;
+  line-height: 1.5;
+}
+
+.score-stats {
+  display: flex;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.score-stat {
+  flex: 1;
+  background: var(--bg);
+  border-radius: 10px;
+  padding: 14px;
+  text-align: center;
+}
+
+.score-stat-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: var(--text-secondary);
+  display: block;
+  margin-bottom: 4px;
+}
+
+.score-stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Outflows */
+.outflows-card {
+  grid-row: span 2;
+}
+
+.outflows-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.outflow-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 8px;
+  transition: background 0.1s ease;
+}
+
+.outflow-item:hover {
+  background: var(--bg);
+}
+
+.outflow-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.outflow-name {
+  flex: 1;
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.outflow-amount {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--danger);
+}
+
+/* Trajectory */
+.trajectory-card {
+  grid-column: span 2;
+}
+
+.trajectory-subtitle {
+  font-size: 13px;
+  color: var(--text-secondary);
+  margin-top: -10px;
+  margin-bottom: 16px;
+}
+
+.trajectory-chart {
+  display: flex;
+  align-items: flex-end;
+  gap: 8px;
+  height: 140px;
+}
+
+.trajectory-col {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: flex-end;
+  gap: 6px;
+}
+
+.trajectory-bar-wrapper {
+  flex: 1;
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.trajectory-bar {
+  width: 100%;
+  max-width: 32px;
+  background: linear-gradient(to top, var(--primary), #3b4a8a);
+  border-radius: 4px 4px 0 0;
+  min-height: 4px;
+  transition: height 0.3s ease;
+  cursor: pointer;
+  opacity: 0.8;
+}
+
+.trajectory-bar:hover {
+  opacity: 1;
+}
+
+.trajectory-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+/* Budgets */
+.budgets-card {
+  grid-column: span 1;
+}
+
+.budgets-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.budget-item {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.budget-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.budget-name {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--text);
+}
+
+.budget-pct {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.budget-bar-bg {
+  height: 8px;
+  background: var(--bg);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.budget-bar-fill {
+  height: 100%;
+  border-radius: 4px;
+  transition: width 0.3s ease;
+}
+
+@media (max-width: 1100px) {
+  .insights-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .outflows-card {
+    grid-row: auto;
+  }
+
+  .trajectory-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .trajectory-card {
+    grid-column: span 1;
+  }
+}

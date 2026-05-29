@@ -1,0 +1,360 @@
+.dashboard {
+  max-width: 1200px;
+}
+
+.dashboard-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.section-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  color: var(--text-secondary);
+  font-weight: 600;
+}
+
+.page-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+  margin-top: 4px;
+}
+
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.month-select {
+  padding: 8px 14px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  font-size: 14px;
+  color: var(--text);
+  background: var(--card-bg);
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
+}
+
+.total-amount {
+  text-align: right;
+}
+
+.total-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--text-secondary);
+  display: block;
+}
+
+.total-value {
+  font-size: 28px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.loading-state {
+  text-align: center;
+  padding: 60px;
+  color: var(--text-secondary);
+  font-size: 15px;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 280px 1fr 280px;
+  gap: 20px;
+}
+
+.card {
+  background: var(--card-bg);
+  border-radius: 14px;
+  padding: 24px;
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.04);
+}
+
+.card-title {
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 16px;
+}
+
+.card-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.card-header-row .card-title {
+  margin-bottom: 0;
+}
+
+.view-all-btn {
+  background: none;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.view-all-btn:hover {
+  color: var(--primary);
+  background: var(--bg);
+}
+
+/* Progress Card */
+.progress-card {
+  text-align: center;
+}
+
+.progress-ring-container {
+  width: 140px;
+  margin: 0 auto 16px;
+}
+
+.progress-ring {
+  width: 100%;
+  height: auto;
+}
+
+.progress-stats {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.stat {
+  text-align: center;
+}
+
+.stat-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.stat-value {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+/* Category Pills */
+.category-pills {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.category-pill {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.pill-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 12px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.pill-label {
+  font-size: 11px;
+  color: var(--text-secondary);
+}
+
+/* Activity List */
+.activity-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px;
+  border-radius: 10px;
+  transition: background 0.1s ease;
+}
+
+.activity-item:hover {
+  background: var(--bg);
+}
+
+.activity-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 10px;
+  background: var(--bg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--primary);
+  flex-shrink: 0;
+}
+
+.activity-details {
+  flex: 1;
+  min-width: 0;
+}
+
+.activity-desc {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--text);
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.activity-meta {
+  font-size: 12px;
+  color: var(--text-secondary);
+}
+
+.activity-amount {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text);
+  white-space: nowrap;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 24px;
+  color: var(--text-secondary);
+  font-size: 14px;
+}
+
+/* Insight Card */
+.insight-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.insight-content {
+  flex: 1;
+}
+
+.category-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.category-row {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.category-info {
+  display: flex;
+  justify-content: space-between;
+  font-size: 13px;
+}
+
+.category-name {
+  font-weight: 500;
+  color: var(--text);
+}
+
+.category-pct {
+  color: var(--text-secondary);
+  font-size: 12px;
+}
+
+.category-bar-bg {
+  height: 6px;
+  background: var(--bg);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.category-bar-fill {
+  height: 100%;
+  background: var(--primary);
+  border-radius: 3px;
+  transition: width 0.3s ease;
+}
+
+.category-amount {
+  font-size: 12px;
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.spend-rate-legend {
+  display: flex;
+  gap: 8px;
+  margin-top: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+
+.rate-badge {
+  font-size: 11px;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: color-mix(in srgb, var(--rate-color) 12%, transparent);
+  color: var(--rate-color);
+  font-weight: 600;
+}
+
+@media (max-width: 1100px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .insight-card {
+    grid-column: span 2;
+  }
+}
+
+@media (max-width: 640px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .insight-card {
+    grid-column: span 1;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+  }
+}
