@@ -1,0 +1,22 @@
+service: react-spends
+
+image: volkssturm/react-spends
+
+servers:
+  web:
+    hosts:
+      - 78.47.87.179
+    options:
+      publish: "8000:8000"
+
+builder:
+  arch: arm64
+
+registry:
+  username: volkssturm
+  password:
+    - KAMAL_REGISTRY_PASSWORD
+
+env:
+  clear:
+    VITE_API_HOST: https://spends.harvinllanes.com/api

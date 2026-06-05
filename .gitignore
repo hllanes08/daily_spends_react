@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Kamal secrets
+.kamal/secrets
+.kamal/secrets-common
+.env
