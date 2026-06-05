@@ -1,7 +1,6 @@
-FROM ubuntu:24.04
+FROM ubuntu:24.04 AS build
 
-RUN apt-get update && \
-    apt-get install -y curl && \
+RUN apt-get update && apt-get install -y curl && \
     curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
     apt-get install -y nodejs && \
     apt-get clean && rm -rf /var/lib/apt/lists/*
@@ -15,8 +14,18 @@ COPY . .
 
 RUN npm run build
 
-RUN npm install -g serve
+FROM ubuntu:24.04
 
-EXPOSE 3000
+RUN apt-get update && apt-get install -y curl && \
+    curl -fsSL https://deb.nodesource.com/setup_22.x | bash - && \
+    apt-get install -y nodejs && \
+    apt-get clean && rm -rf /var/lib/apt/lists/* && \
+    npm install -g serve
 
-CMD ["serve", "-s", "dist", "-l", "3000"]
+WORKDIR /app
+
+COPY --from=build /app/dist ./dist
+
+EXPOSE 8000
+
+CMD ["serve", "-s", "dist", "-l", "8000"]
