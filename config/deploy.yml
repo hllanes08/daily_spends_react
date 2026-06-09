@@ -6,17 +6,16 @@ servers:
   web:
     hosts:
       - 78.47.87.179
+    proxy: false
     options:
-      publish: "8000:8000"
+      publish: "8001:8000"
 
 builder:
   arch: arm64
+  args:
+    VITE_API_HOST: https://spends.harvinllanes.com/api
 
 registry:
   username: volkssturm
   password:
     - KAMAL_REGISTRY_PASSWORD
-
-env:
-  clear:
-    VITE_API_HOST: https://spends.harvinllanes.com/api

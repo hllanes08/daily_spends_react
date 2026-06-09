@@ -12,6 +12,9 @@ RUN npm ci
 
 COPY . .
 
+ARG VITE_API_HOST
+ENV VITE_API_HOST=$VITE_API_HOST
+
 RUN npm run build
 
 FROM ubuntu:24.04
